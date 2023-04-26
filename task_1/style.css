@@ -1,0 +1,52 @@
+.Circle {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: black solid;
+}
+
+.hour-hand {
+  position: absolute;
+  width: 2px;
+  height: 90px;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  background-color: black;
+}
+.minute-hand {
+  position: absolute;
+  width: 2px;
+  height: 70px;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  background-color: black;
+}
+
+.hour-hand {
+  animation: hour-hand-rotate 15s linear infinite;
+}
+
+.minute-hand {
+  animation: minute-hand-rotate 60s linear infinite;
+}
+
+@keyframes hour-hand-rotate {
+  from {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -100%) rotate(360deg);
+  }
+}
+
+@keyframes minute-hand-rotate {
+  from {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -100%) rotate(360deg);
+  }
+}
